@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="#" method="post">
+    <input type="hidden" name="id" value="123"><br>
+
+    <label for="username"> 用户名：</label>
+    <input type="text" name="username" id = "username"><br>
+
+    <label for = "id">密码：</label>
+
+    <input type="password" name="password" id = "id"><br>
+    性别：
+<!--    注：如果要达到互斥的效果，只要name属性相同就可以了
+        如果不设置value的值，那么上传到后台的值就会一样，都会是on，所以我们通过value更改上床的值  男就是1  女就是2 后面的lable和上面的一样-->
+    <input type="radio" name="gender" value="1" id="man"><label for = "man">男</label>
+    <input type="radio" name="gender" value="2" id="women"><label for="women">女</label>
+    <br>
+    爱好：
+    <input type="checkbox" name="hobby" value="1">旅游
+    <input type="checkbox" name="hobby" value="2">电影
+    <input type="checkbox" name="hobby" value="3">游戏
+    <br>
+    城市：
+    <select name="city">
+        <option>北京</option>
+        <option>西安</option>
+        <option>天津</option>
+    </select>
+
+    <br>
+    个人描述：
+    <textarea></textarea>
+    <br>
+    上传文件：
+    <input type="file">
+    <br>
+    <input type="submit" value="提交上">
+    <input type="reset" value="重新">
+    <input type="button" value="一个按钮">
+
+</form>
+</body>
+</html>

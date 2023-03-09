@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>马治伟复习演示</title>
+</head>
+<body>
+<!--必须在hrml标签下，不能再script下面-->
+<input type="button" value="点" onClick="on()">
+<input type="button" value="再点我" id = "ma">
+
+<script>
+
+    function on() {
+        alert("我被电了")
+    }
+
+    document.getElementById("ma").onclick = function () {
+        alert("我又被点了")
+    }
+</script>
+
+</body>
+</html>
