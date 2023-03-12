@@ -3,6 +3,7 @@ package com.mazhiwei.web; /**
  * @version 1.0
  */
 
+import com.alibaba.fastjson.JSON;
 import com.mazhiwei.pojo.Brand;
 import com.mazhiwei.service.BrandService;
 
@@ -20,8 +21,12 @@ public class SelectAllServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Brand> brands = service.selectAll();
-        request.setAttribute("brands",brands);
-        request.getRequestDispatcher("/brand.jsp").forward(request,response);
+
+        String jsonString = JSON.toJSONString(brands);
+//        request.setAttribute("brands",brands);
+//        request.getRequestDispatcher("/brand.jsp").forward(request,response);
+        response.setContentType("text/json;charset=utf-8");
+        response.getWriter().write(jsonString);
     }
 
     @Override
